@@ -1,0 +1,48 @@
+body{
+    width:100%;
+    background-image: url(img/TSU92_syukuhuku_TP_V.jpg);
+    background-size: 100%;
+}
+header{
+    text-align: center;
+}
+main{
+    display: flex;
+}
+.husband{
+
+    text-align: center;
+    width: 50%;
+}
+.wife{
+    text-align: center;
+    width: 50%;
+}
+footer{
+    text-align: center;
+}
+p{
+    font-size: 12px;
+    line-height: 10px;
+}
+span{
+    font-weight: bold;
+    font-size: 22px;
+    font-family: "Segoe Script";
+}
+.antro{
+    font-size: 20px;
+    font-family: "Antro Vectra";
+}
+.date{
+    font-family: "MV Boli";
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+h1{
+    font-size: 50px;
+    font-family: "Antro Vectra";
+}
+#header img{
+    width: 100%;
+}
