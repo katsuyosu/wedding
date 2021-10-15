@@ -14,7 +14,8 @@ $(function(){
       $(this).stop().addClass('slide-right');
     }
   });
-  $('.inview-balloon').on('inview',function(event,isInView){
+
+  $('.firstday,.Wefellinlove,.Willyoumarryme,.Shestolehislastname,.WesaidIdo').on('inview',function(event,isInView){
     if(isInView){
       $(this).stop().addClass('balloon');
     }
