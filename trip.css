@@ -1,0 +1,260 @@
+@charset "UTF-8";
+body {
+  max-width: 1440px;
+  width: 100%;
+  background-image: url(img/TSU92_syukuhuku_TP_V.jpg);
+  background-size: contain;
+  margin: 0 auto;
+}
+
+.header {
+  max-width: 1440px;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  z-index: 1000;
+}
+.header-list {
+  display: flex;
+  justify-content: space-around;
+}
+.header-item {
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: relative;
+}
+.header-item a {
+  color: rgb(232, 232, 232);
+  transition: all 0.8s;
+}
+.header-item::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  display: block;
+  background: #000;
+  bottom: 10px;
+  transition: all 0.8s;
+}
+.header-item:hover::after {
+  background: #fff;
+}
+.header-item:hover a {
+  color: rgb(156, 204, 224);
+}
+
+.contents {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+.contents-title {
+  font-size: 2.5rem;
+  text-align: center;
+  padding-bottom: 60px;
+}
+.contents-contain {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 30px;
+}
+.contents .slider {
+  margin: 0 auto;
+  width: 50%;
+  height: 100%;
+}
+.contents .slider img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.contents-text {
+  height: 100%;
+  width: 40%;
+  font-size: 1.5rem;
+  line-height: 2;
+}
+
+.contentsyoko {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+.contentsyoko-title {
+  font-size: 2.5rem;
+  text-align: center;
+  padding-bottom: 60px;
+}
+.contentsyoko-contain {
+  display: block;
+  height: 100%;
+  padding: 0 30px;
+}
+.contentsyoko .slider {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 30px;
+}
+.contentsyoko .slider img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.contentsyoko-text {
+  height: 100%;
+  width: 100%;
+  font-size: 1.5rem;
+  line-height: 2;
+}
+
+.trip {
+  margin-bottom: 80px;
+}
+.trip-title {
+  font-size: 2.5rem;
+  text-align: center;
+  padding-bottom: 60px;
+}
+.trip-title span {
+  font-size: 4rem;
+  font-family: "Segoe Script";
+}
+.trip-list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.trip-item {
+  width: 48%;
+  height: 600px;
+  overflow: hidden;
+}
+.trip-item img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+.trip-item img:hover {
+  opacity: 0.6;
+  transform: scale(1.2);
+}
+.trip .hontou {
+  position: relative;
+}
+.trip .hontou::before {
+  position: absolute;
+  content: "~沖縄本島はこちら~";
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 1.5rem;
+}
+.trip .index {
+  position: relative;
+}
+.trip .index::before {
+  position: absolute;
+  content: "~プロフィールはこちら~";
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #000;
+  font-size: 1.5rem;
+}
+.trip .ishigaki {
+  position: relative;
+}
+.trip .ishigaki::before {
+  content: "~石垣島はこちら~";
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    height: 40px;
+    line-height: 40px;
+  }
+  .header-item {
+    font-size: 0.65rem;
+  }
+  .header-item::after {
+    height: 1px;
+  }
+
+  .contents {
+    margin-bottom: 60px;
+  }
+  .contents-title {
+    font-size: 1.3rem;
+  }
+  .contents-contain {
+    display: block;
+    height: 100%;
+    padding: 0 30px;
+  }
+  .contents .slider {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 30px;
+  }
+  .contents-text {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .contentsyoko {
+    margin-bottom: 60px;
+  }
+  .contentsyoko-title {
+    font-size: 1.3rem;
+  }
+  .contentsyoko-text {
+    font-size: 1rem;
+  }
+
+  .trip-title {
+    font-size: 1rem;
+  }
+  .trip-title span {
+    font-size: 1.8rem;
+  }
+  .trip-list {
+    display: block;
+  }
+  .trip-item {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 60px;
+  }
+  .trip .hontou {
+    position: relative;
+  }
+  .trip .hontou::before {
+    font-size: 0.9rem;
+  }
+  .trip .ishigaki {
+    position: relative;
+  }
+  .trip .ishigaki::before {
+    font-size: 0.9rem;
+  }
+  .trip .index {
+    position: relative;
+  }
+  .trip .index::before {
+    font-size: 0.9rem;
+  }
+}/*# sourceMappingURL=trip.css.map */

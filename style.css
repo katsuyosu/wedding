@@ -1,0 +1,305 @@
+@charset "UTF-8";
+body {
+  max-width: 1440px;
+  width: 100%;
+  background-image: url(img/TSU92_syukuhuku_TP_V.jpg);
+  background-size: contain;
+  margin: 0 auto;
+}
+
+.header {
+  max-width: 1440px;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  z-index: 1000;
+}
+.header-list {
+  display: flex;
+  justify-content: space-around;
+}
+.header-item {
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: relative;
+}
+.header-item a {
+  color: rgb(232, 232, 232);
+  transition: all 0.8s;
+}
+.header-item::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  display: block;
+  background: #000;
+  bottom: 10px;
+  transition: all 0.8s;
+}
+.header-item:hover::after {
+  background: #fff;
+}
+.header-item:hover a {
+  color: rgb(156, 204, 224);
+}
+
+.fv {
+  max-width: 1440px;
+  margin-bottom: 180px;
+}
+.fv img {
+  width: 100%;
+  display: block;
+}
+
+.profile {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.profile-title {
+  text-align: center;
+  font-size: 4rem;
+  font-family: "Antro Vectra";
+  margin-bottom: 60px;
+}
+.profile-wrap {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 120px;
+}
+.profile-wrap .husband,
+.profile-wrap .wife {
+  text-align: center;
+}
+.profile-wrap .husband p:nth-child(16) {
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+.profile-wrap .husband p:nth-child(17) {
+  margin: 30px 0;
+}
+.profile-wrap .gender {
+  font-size: 3rem;
+}
+.profile-wrap p {
+  font-size: 1.8rem;
+  margin: 15px 0;
+}
+.profile-wrap .answer {
+  font-weight: bold;
+}
+.profile-wrap .paragraph.answer {
+  margin: 0;
+}
+
+.begin {
+  text-align: center;
+  margin-bottom: 120px;
+}
+.begin h2 {
+  font-size: 3rem;
+}
+.begin .balloon {
+  padding: 20px 0;
+}
+.begin p span {
+  font-weight: bold;
+  font-family: "Segoe Script";
+  font-size: 2.5rem;
+}
+.begin .date {
+  font-size: 1.5rem;
+  padding-top: 10px;
+  font-family: "MV Boli";
+}
+.begin .antro {
+  padding-top: 40px;
+  font-family: "Antro Vectra";
+  font-size: 3rem;
+}
+
+.wedding {
+  margin-bottom: 120px;
+  /*slick setting*/
+}
+.wedding-title {
+  font-size: 2.5rem;
+  text-align: center;
+  padding-bottom: 60px;
+}
+.wedding-title span {
+  font-size: 4rem;
+  font-family: "Segoe Script";
+}
+.wedding-item {
+  width: 100%;
+  height: 80vh;
+}
+.wedding .slider {
+  margin: 100px auto;
+  width: 80%;
+}
+.wedding .slider img {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.wedding .slick-prev:before,
+.wedding .slick-next:before {
+  color: #000;
+}
+
+.trip {
+  margin-bottom: 80px;
+}
+.trip-title {
+  font-size: 2.5rem;
+  text-align: center;
+  padding-bottom: 60px;
+}
+.trip-title span {
+  font-size: 4rem;
+  font-family: "Segoe Script";
+}
+.trip-list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.trip-item {
+  width: 48%;
+  height: 600px;
+  overflow: hidden;
+}
+.trip-item img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+.trip-item img:hover {
+  opacity: 0.6;
+  transform: scale(1.2);
+}
+.trip .hontou {
+  position: relative;
+}
+.trip .hontou::before {
+  position: absolute;
+  content: "~沖縄本島はこちら~";
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 1.5rem;
+}
+.trip .ishigaki {
+  position: relative;
+}
+.trip .ishigaki::before {
+  content: "~石垣島はこちら~";
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    height: 40px;
+    line-height: 40px;
+  }
+  .header-item {
+    font-size: 0.65rem;
+  }
+  .header-item::after {
+    height: 1px;
+  }
+
+  .fv {
+    margin-bottom: 60px;
+  }
+
+  .profile-title {
+    font-size: 2rem;
+  }
+  .profile-wrap .husband p:nth-child(16) {
+    margin: 15px 0;
+  }
+  .profile-wrap .husband p:nth-child(17) {
+    margin: 22px 0;
+  }
+  .profile-wrap .gender {
+    font-size: 1.4rem;
+  }
+  .profile-wrap p {
+    font-size: 0.7rem;
+  }
+
+  .begin h2 {
+    font-size: 1.2rem;
+  }
+  .begin .balloon {
+    padding: 10px 0;
+  }
+  .begin p {
+    font-size: 0.7rem;
+  }
+  .begin p span {
+    font-size: 1.1rem;
+  }
+  .begin .date {
+    font-size: 0.7rem;
+  }
+  .begin .antro {
+    font-size: 1.2rem;
+  }
+
+  .trip-title {
+    font-size: 1rem;
+  }
+  .trip-title span {
+    font-size: 1.8rem;
+  }
+  .trip-list {
+    display: block;
+  }
+  .trip-item {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 60px;
+  }
+  .trip .hontou {
+    position: relative;
+  }
+  .trip .hontou::before {
+    font-size: 0.9rem;
+  }
+  .trip .ishigaki {
+    position: relative;
+  }
+  .trip .ishigaki::before {
+    font-size: 0.9rem;
+  }
+
+  .wedding {
+    margin-bottom: 60px;
+  }
+  .wedding-title {
+    font-size: 1rem;
+    text-align: center;
+    padding-bottom: 0;
+  }
+  .wedding-title span {
+    font-size: 1.8rem;
+    font-family: "Segoe Script";
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,282 @@
+// 共通
+body {
+  max-width: 1440px;
+  width: 100%;
+  background-image: url(img/TSU92_syukuhuku_TP_V.jpg);
+  background-size: contain;
+  margin: 0 auto;
+}
+// 共通ここまで
+// ヘッダー
+.header {
+  max-width: 1440px;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  z-index: 1000;
+  &-list {
+    display: flex;
+    justify-content: space-around;
+  }
+  &-item {
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: relative;
+    a {
+      color: rgb(232, 232, 232);
+      transition: all 0.8s;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      display: block;
+      background: #000;
+      bottom: 10px;
+      transition: all 0.8s;
+    }
+    &:hover {
+      &::after {
+        background: #fff;
+      }
+      a {
+        color: rgb(156, 204, 224);
+      }
+    }
+  }
+}
+// ヘッダーここまで
+// 結婚式
+.contents {
+  margin-top: 120px;
+  margin-bottom: 120px;
+
+  &-title {
+    font-size: 2.5rem;
+    text-align: center;
+    padding-bottom: 60px;
+  }
+  &-contain {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 30px;
+  }
+  .slider {
+    margin: 0 auto;
+    width: 50%;
+    height: 100%;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  &-text {
+    height: 100%;
+    width: 40%;
+    font-size: 1.5rem;
+    line-height: 2;
+  }
+}
+// 結婚式ここまで
+// 美ら海
+.contentsyoko {
+  margin-top: 120px;
+  margin-bottom: 120px;
+
+  &-title {
+    font-size: 2.5rem;
+    text-align: center;
+    padding-bottom: 60px;
+  }
+  &-contain {
+    display: block;
+    height: 100%;
+    padding: 0 30px;
+  }
+  .slider {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 30px;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  &-text {
+    // text-align: center;
+    height: 100%;
+    width: 100%;
+    font-size: 1.5rem;
+    line-height: 2;
+  }
+}
+// 美ら海ここまで
+// 旅行
+.trip {
+  margin-bottom: 80px;
+  &-title {
+    font-size: 2.5rem;
+    text-align: center;
+    padding-bottom: 60px;
+    span {
+      font-size: 4rem;
+      font-family: "Segoe Script";
+    }
+  }
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &-item {
+    width: 48%;
+    height: 600px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      transition: all 0.5s;
+      &:hover {
+        opacity: 0.6;
+        transform: scale(1.2);
+      }
+    }
+  }
+  .hontou {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "~沖縄本島はこちら~";
+      top: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      font-size: 1.5rem;
+    }
+  }
+  .index {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "~プロフィールはこちら~";
+      top: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #000;
+      font-size: 1.5rem;
+    }
+  }
+  .ishigaki {
+    position: relative;
+    &::before {
+      content: "~石垣島はこちら~";
+      position: absolute;
+      top: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      font-size: 1.5rem;
+    }
+  }
+}
+// 旅行ここまで
+
+// レスポンシブ対応
+@media screen and (max-width: 768px) {
+  // ヘッダー
+  .header {
+    height: 40px;
+    line-height: 40px;
+    &-item {
+      font-size: 0.65rem;
+    }
+    &-item {
+      &::after {
+        height: 1px;
+      }
+    }
+  }
+  // ヘッダーここまで
+  // 結婚式
+  .contents {
+    margin-bottom: 60px;
+
+    &-title {
+      font-size: 1.3rem;
+    }
+    &-contain {
+      display: block;
+      height: 100%;
+      padding: 0 30px;
+    }
+    .slider {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 30px;
+    }
+    &-text {
+      width: 100%;
+      font-size: 1rem;
+    }
+  }
+  // 結婚式ここまで
+
+  .contentsyoko {
+    margin-bottom: 60px;
+
+    &-title {
+      font-size: 1.3rem;
+    }
+    &-text {
+      font-size: 1rem;
+    }
+  }
+  // 美ら海ここまで
+  // 旅行
+  .trip {
+    &-title {
+      font-size: 1rem;
+      span {
+        font-size: 1.8rem;
+      }
+    }
+    &-list {
+      display: block;
+    }
+    &-item {
+      width: 100%;
+      height: 300px;
+      margin-bottom: 60px;
+    }
+    .hontou {
+      position: relative;
+      &::before {
+        font-size: 0.9rem;
+      }
+    }
+    .ishigaki {
+      position: relative;
+      &::before {
+        font-size: 0.9rem;
+      }
+    }
+    .index {
+      position: relative;
+      &::before {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  // 旅行ここまで
+}
+// レスポンシブ対応ここまで

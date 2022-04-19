@@ -1,0 +1,344 @@
+// 共通
+body {
+  max-width: 1440px;
+  width: 100%;
+  background-image: url(img/TSU92_syukuhuku_TP_V.jpg);
+  background-size: contain;
+  margin: 0 auto;
+}
+// 共通ここまで
+// ヘッダー
+.header {
+  max-width: 1440px;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  z-index: 1000;
+  &-list {
+    display: flex;
+    justify-content: space-around;
+  }
+  &-item {
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: relative;
+    a {
+      color: rgb(232, 232, 232);
+      transition: all 0.8s;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      display: block;
+      background: #000;
+      bottom: 10px;
+      transition: all 0.8s;
+    }
+    &:hover {
+      &::after {
+        background: #fff;
+      }
+      a {
+        color: rgb(156, 204, 224);
+      }
+    }
+  }
+}
+// ヘッダーここまで
+// FV
+.fv {
+  max-width: 1440px;
+  margin-bottom: 180px;
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+// FVここまで
+// プロフィール
+.profile {
+  max-width: 960px;
+  margin: 0 auto;
+  &-title {
+    text-align: center;
+    font-size: 4rem;
+    font-family: "Antro Vectra";
+    margin-bottom: 60px;
+  }
+  &-wrap {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 120px;
+    .husband,
+    .wife {
+      text-align: center;
+    }
+    .husband {
+      p {
+        &:nth-child(16) {
+          margin-top: 15px;
+          margin-bottom: 30px;
+        }
+        &:nth-child(17) {
+          margin: 30px 0;
+        }
+      }
+    }
+    .gender {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 1.8rem;
+      margin: 15px 0;
+    }
+    .answer {
+      font-weight: bold;
+    }
+    .paragraph.answer {
+      margin: 0;
+    }
+  }
+}
+// プロフィールここまで
+// なれそめ
+.begin {
+  text-align: center;
+  margin-bottom: 120px;
+  h2 {
+    font-size: 3rem;
+  }
+  .balloon {
+    padding: 20px 0;
+  }
+  p {
+    span {
+      font-weight: bold;
+      font-family: "Segoe Script";
+      font-size: 2.5rem;
+    }
+  }
+  .date {
+    font-size: 1.5rem;
+    padding-top: 10px;
+    font-family: "MV Boli";
+  }
+  .antro {
+    padding-top: 40px;
+    font-family: "Antro Vectra";
+    font-size: 3rem;
+  }
+}
+// なれそめここまで
+// 結婚式
+.wedding {
+  margin-bottom: 120px;
+
+  &-title {
+    font-size: 2.5rem;
+    text-align: center;
+    padding-bottom: 60px;
+    span {
+      font-size: 4rem;
+      font-family: "Segoe Script";
+    }
+  }
+  &-item {
+    width: 100%;
+    height: 80vh;
+  }
+  .slider {
+    margin: 100px auto;
+    width: 80%;
+    img {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      object-fit: contain;
+    }
+  }
+  /*slick setting*/
+  .slick-prev:before,
+  .slick-next:before {
+    color: #000;
+  }
+}
+// 結婚式ここまで
+// 旅行
+.trip {
+  margin-bottom: 80px;
+  &-title {
+    font-size: 2.5rem;
+    text-align: center;
+    padding-bottom: 60px;
+    span {
+      font-size: 4rem;
+      font-family: "Segoe Script";
+    }
+  }
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &-item {
+    width: 48%;
+    height: 600px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      transition: all 0.5s;
+      &:hover {
+        opacity: 0.6;
+        transform: scale(1.2);
+      }
+    }
+  }
+  .hontou {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "~沖縄本島はこちら~";
+      top: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      font-size: 1.5rem;
+    }
+  }
+  .ishigaki {
+    position: relative;
+    &::before {
+      content: "~石垣島はこちら~";
+      position: absolute;
+      top: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      font-size: 1.5rem;
+    }
+  }
+}
+// 旅行ここまで
+// レスポンシブ対応
+@media screen and (max-width: 768px) {
+  // ヘッダー
+  .header {
+    height: 40px;
+    line-height: 40px;
+    &-item {
+      font-size: 0.65rem;
+    }
+    &-item {
+      &::after {
+        height: 1px;
+      }
+    }
+  }
+  // ヘッダーここまで
+  // FV
+  .fv {
+    margin-bottom: 60px;
+  }
+  // FVここまで
+  // プロフィール
+  .profile {
+    &-title {
+      font-size: 2rem;
+    }
+    &-wrap {
+      .husband {
+        p {
+          &:nth-child(16) {
+            margin: 15px 0;
+          }
+          &:nth-child(17) {
+            margin: 22px 0;
+          }
+        }
+      }
+      .gender {
+        font-size: 1.4rem;
+      }
+      p {
+        font-size: 0.7rem;
+      }
+    }
+  }
+  // プロフィールここまで
+  // なれそめ
+  .begin {
+    h2 {
+      font-size: 1.2rem;
+    }
+    .balloon {
+      padding: 10px 0;
+    }
+    p {
+      font-size: 0.7rem;
+      span {
+        font-size: 1.1rem;
+      }
+    }
+    .date {
+      font-size: 0.7rem;
+    }
+    .antro {
+      font-size: 1.2rem;
+    }
+  }
+  // なれそめここまで
+  // 旅行
+  .trip {
+    &-title {
+      font-size: 1rem;
+      span {
+        font-size: 1.8rem;
+      }
+    }
+    &-list {
+      display: block;
+    }
+    &-item {
+      width: 100%;
+      height: 300px;
+      margin-bottom: 60px;
+    }
+    .hontou {
+      position: relative;
+      &::before {
+        font-size: 0.9rem;
+      }
+    }
+    .ishigaki {
+      position: relative;
+      &::before {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  // 旅行ここまで
+  // 結婚式
+  .wedding {
+    margin-bottom: 60px;
+
+    &-title {
+      font-size: 1rem;
+      text-align: center;
+      padding-bottom: 0;
+      span {
+        font-size: 1.8rem;
+        font-family: "Segoe Script";
+      }
+    }
+  }
+  // 結婚式ここまで
+}
+// レスポンシブ対応ここまで
